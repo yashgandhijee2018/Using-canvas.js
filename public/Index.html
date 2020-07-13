@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+     Server  
+    </title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<style type="text/css">
+    #chart_simple{
+      background: fixed;
+      background-color: #FFFFFF;
+      width: 10%;
+      height: 10%;
+      border: 2px solid rgb(11, 66, 107);
+    }
+
+    #chart_simple2{
+      background: fixed;
+      background-color: #FFFFFF;
+      width: 10%;
+      height: 10%;
+      border: 2px solid rgb(11, 66, 107);
+    }
+
+    #chart_comparative{
+      background: fixed;
+      width: 10%;
+      height: 10%;
+      border: 2px solid rgb(11, 66, 107);
+      background-color: solid rgb(11, 66, 107);
+    }
+</style>
+
+<body>
+
+<ol style="width: 600px;">
+    <li> <canvas style="width: 100%;height: 50%;" id="chart_simple"></canvas></li>
+    <br>
+    <li> <div style="width: 100%;height: 200px;"; id="chart_comparative"></div></li>
+    <br>
+    <li> <div style="width: 100%;height: 200px;"; id="chart_simple2"></div></li>
+    <li><canvas id="myChart"></canvas>
+</ol>
+
+<script src="C:\Users\yash gandhi\Desktop\project1\src\chartLineComparative.js"></script>
+
+<script src="C:\Users\yash gandhi\Desktop\project1\src\chartLine1.js"></script>
+
+<script src="C:\Users\yash gandhi\Desktop\project1\src\chartLine2.js"></script>
+
+<script>
+  const api_url='https://api.wheretheiss.at/v1/satellites';
+  async function getData(){
+    const res=await fetch(api_url);
+    const data=await res.json();
+    console.log(data);
+  }
+
+  getData();
+</script>
+
+</body>
+</html>
